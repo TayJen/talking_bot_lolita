@@ -29,7 +29,7 @@ Starting article with theory: [Agent Foundations](https://lilianweng.github.io/p
 Recommended Constructor Details:
 
 1) **LLM Deployment:** It's convenient to use `llama.cpp` (https://github.com/ggerganov/llama.cpp) or `ollama` (https://ollama.com/). APIs from Replicate or OpenAI can also be explored, or you can set up your own model. Starting with simpler models like Gemma-2b or quantized 7b or 13b is advisable due to their lower computational demands. Remember to balance API speed and cost.
-2) **Wake Voice Technology:** Utilize [Choosing a Wake Word](https://picovoice.ai/docs/tips/choosing-a-wake-word/) with options like Athena for consistent voice recognition. Whisper could also be an alternative for wake word detection.
+2) **A Wake Word:** Utilize [Choosing a Wake Word](https://picovoice.ai/docs/tips/choosing-a-wake-word/) with options like Athena in Italian model for consistent voice recognition. Whisper could also be an alternative for wake word detection.
 3) **Voice Recognition:** Employ various versions of Whisper for efficient and robust voice recognition capabilities:
    - https://github.com/ggerganov/whisper.cpp
    - https://github.com/Vaibhavs10/insanely-fast-whisper
