@@ -2,23 +2,23 @@
 
 **Objectives:**
 
-Basic Solution:
+Basic Solution (60 points):
 
-* **Understanding Language Models Integration** - Learn how to incorporate and manage language models in your project to process and understand user input.
-* **Handling Dialogue** - Develop the capability to manage and sustain interactive dialogues with users.
-* **Voice Recognition Integration** - Integrate voice recognition technologies to interpret spoken commands.
-* **Voice Generation Integration** - Enable your system to respond audibly using synthesized speech.
+* **Understanding Language Models Integration** - Learn how to incorporate and manage language models in your project to process and understand user input (10 points).
+* **Handling Dialogue** - Develop the capability to manage and sustain interactive dialogues with users (20 points).
+* **Voice Recognition Integration** - Integrate voice recognition technologies to interpret spoken commands (20 points).
+* **Voice Generation Integration** - Enable your system to respond audibly using synthesized speech (20 points).
 
-Further Enhancements:
+Further Enhancements (each 15 points):
 
-* **Voice Cloning** - Implement voice cloning to personalize the system’s voice to the user or to mimic other voices.
-* **Video Generation with Lip Sync** - Create video outputs that include lip-syncing to make interactions appear more natural and engaging.
-* **Add Long-term Memory with PEFT** - Implement Predictive Efficiently Indexed Feature Tracking (PEFT) for a more robust and scalable memory system.
-* **Add Long-term Memory with an Updatable Database** - Incorporate a dynamic database system to retain and recall past interactions and information.
-* **Add Short-term Memory** - Develop short-term memory capabilities to remember the context of ongoing sessions.
-* **Add Routing and Tools** - Implement systems to manage and route tasks to appropriate tools or sub-systems.
-* **Add Routing and Actions** - Develop routing logic to direct actions based on user commands or system decisions.
-* **Add Planning and Goals** - Integrate planning capabilities to set, manage, and achieve short-term and long-term goals.
+* **Voice Cloning** - Implement voice cloning to personalize the system’s voice to the user or to mimic other voices (30 points).
+* **Video Generation with Lip Sync** - Create video outputs that include lip-syncing to make interactions appear more natural and engaging  (30 points).
+* **Add Long-term Memory with PEFT** - Implement Predictive Efficiently Indexed Feature Tracking (PEFT) for a more robust and scalable memory system  (30 points).
+* **Add Long-term Memory with an Updatable Database** - Incorporate a dynamic database system to retain and recall past interactions and information  (20 points).
+* **Add Short-term Memory** - Develop short-term memory capabilities to remember the context of ongoing sessions  (10 points).
+* **Add Routing and Tools** - Implement systems to manage and route tasks to appropriate tools or sub-systems  (10 points).
+* **Add Routing and Actions** - Develop routing logic to direct actions based on user commands or system decisions  (10 points).
+* **Add Planning and Goals** - Integrate planning capabilities to set, manage, and achieve short-term and long-term goals  (20 points).
 
 Homework involves assembling your constructor from various parts and making it all work together by scripting in Python. Your main challenge will focus on optimizing for performance and determining which features to prioritize for speed.
 
