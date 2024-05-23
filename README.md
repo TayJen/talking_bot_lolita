@@ -9,7 +9,7 @@ Basic Solution (60 points):
 * **Voice Recognition Integration** - Integrate voice recognition technologies to interpret spoken commands (20 points).
 * **Voice Generation Integration** - Enable your system to respond audibly using synthesized speech (20 points).
 
-Further Enhancements (each 15 points):
+Further Enhancements:
 
 * **Voice Cloning** - Implement voice cloning to personalize the system’s voice to the user or to mimic other voices (30 points).
 * **Video Generation with Lip Sync** - Create video outputs that include lip-syncing to make interactions appear more natural and engaging  (30 points).
