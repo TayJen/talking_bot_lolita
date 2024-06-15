@@ -1,0 +1,14 @@
+python version
+https://github.com/abetlen/llama-cpp-python?tab=readme-ov-file
+
+macos installing
+https://llama-cpp-python.readthedocs.io/en/latest/install/macos/
+
+weights
+https://huggingface.co/TheBloke/CodeLlama-7B-GGUF/blob/main/codellama-7b.Q4_0.gguf
+
+main
+https://github.com/ggerganov/llama.cpp?tab=readme-ov-file
+
+doc
+https://llama-cpp-python.readthedocs.io/en/latest/api-reference/#high-level-api

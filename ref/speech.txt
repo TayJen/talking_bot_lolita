@@ -1,0 +1,9 @@
+https://www.youtube.com/watch?v=wqbul7ueaiw
+https://www.youtube.com/watch?v=_vLKWNv4d5E
+
+main script with whisper
+https://github.com/davabase/whisper_real_time/blob/master/transcribe_demo.py
+
+another whisper repo
+https://github.com/Vaibhavs10/insanely-fast-whisper
+https://replicate.com/vaibhavs10/incredibly-fast-whisper?input=cog
