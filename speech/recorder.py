@@ -1,6 +1,6 @@
+import asyncio
 from datetime import datetime, timedelta
 from queue import Queue
-from time import sleep
 
 import numpy as np
 import torch
@@ -13,7 +13,6 @@ RECORD_TIMEOUT = 2
 PHRASE_TIMEOUT = 3
 
 audio_queue = Queue()
-transcription_queue = Queue()
 
 
 def get_mic_source() -> Microphone:
@@ -41,7 +40,11 @@ def get_model() -> whisper.Whisper:
     return audio_model
 
 
-def start_recording(source: Microphone, recorder: Recognizer, audio_model: whisper.Whisper):
+async def start_recording(
+    source: Microphone, recorder: Recognizer, audio_model: whisper.Whisper, transcription_queue: asyncio.Queue
+):
+    print("Recording...")
+
     def record_callback(_, audio: AudioData) -> None:
         """
         Threaded callback function to receive audio data when recordings finish.
@@ -55,18 +58,29 @@ def start_recording(source: Microphone, recorder: Recognizer, audio_model: whisp
         recorder.adjust_for_ambient_noise(source)
 
     recorder.listen_in_background(source, record_callback, phrase_time_limit=RECORD_TIMEOUT)
-    phrase_time = None
+
+    phrase_time = datetime.utcnow()
+    curr_text = ""
 
     while True:
         now = datetime.utcnow()
-        # Pull raw recorded audio from the queue.
-        if not audio_queue.empty():
-            phrase_complete = False
-            # If enough time has passed between recordings, consider the phrase complete.
-            # Clear the current working audio buffer to start over with the new data.
-            if phrase_time and now - phrase_time > timedelta(seconds=PHRASE_TIMEOUT):
-                phrase_complete = True
-            # This is the last time we received new audio data from the queue.
+
+        phrase_complete = False
+        # If enough time has passed between recordings, consider the phrase complete.
+        # Clear the current working audio buffer to start over with the new data.
+        if now - phrase_time > timedelta(seconds=PHRASE_TIMEOUT):
+            phrase_complete = True
+            phrase_time = now
+
+        if phrase_complete and curr_text != "":
+            print("\n" + "#" * 20)
+            print("Phrase completed in recorder")
+            print(curr_text)
+            print("#" * 20 + "\n")
+            transcription_queue.put_nowait(curr_text)
+            curr_text = ""
+        elif not audio_queue.empty():
+            # update so we don't miss everything that is said
             phrase_time = now
 
             # Combine audio data from queue
@@ -84,8 +98,7 @@ def start_recording(source: Microphone, recorder: Recognizer, audio_model: whisp
 
             # If we detected a pause between recordings, add a new item to our transcription.
             # Otherwise, edit the existing one.
-            if phrase_complete:
-                transcription_queue.put(text)
+            curr_text += text + " "
         else:
             # Infinite loops are bad for processors, must sleep.
-            sleep(0.25)
+            await asyncio.sleep(0.25)
