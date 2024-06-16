@@ -12,6 +12,12 @@ pip install -r requirements.txt
 
 First start up will be the longest, as all the models must be downloaded. After that the startup takes approx 5-10 seconds.
 
+To start the bot run:
+
+```
+python main.py
+```
+
 ## What's done
 
 Several modules have been implemented:
@@ -25,4 +31,4 @@ Several modules have been implemented:
 These issues are unresolved for now:
 - Interrupt the saying command (the model can't be interrupted)
 - More context (llama2 prefix-match limit is being hit fast)
-- 
+- Better model with more compute (for now quantized llama is a little bit hallucinative)
