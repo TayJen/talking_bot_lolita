@@ -77,7 +77,7 @@ async def start_recording(
             print("Phrase completed in recorder")
             print(curr_text)
             print("#" * 20 + "\n")
-            transcription_queue.put_nowait(curr_text)
+            transcription_queue.put_nowait(curr_text.strip())
             curr_text = ""
         elif not audio_queue.empty():
             # update so we don't miss everything that is said

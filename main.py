@@ -1,6 +1,6 @@
 import asyncio
 
-from answer_bot.llama import get_answer_for_the_question
+from answer_bot.agent import chain
 from answer_bot.utils import cleaning_text
 from speech_gen.macos_say import pronounce_text
 from speech_rec.recorder import get_mic_source, get_recorder, get_model, start_recording
@@ -8,11 +8,18 @@ from speech_rec.recorder import get_mic_source, get_recorder, get_model, start_r
 
 async def get_queue_msg(transcription_queue: asyncio.Queue):
     while True:
+        # Get answer from the queue from recording
         msg = await transcription_queue.get()
         print(f"\nGot message: {msg}\n")
-        answer = get_answer_for_the_question(msg)
+
+        # Get answer from chain with the chat history
+        answer = chain.predict(input=msg)
+
+        # Clean it from tags like < >
         clean_answer = cleaning_text(answer)
         print(clean_answer)
+
+        # TTS
         pronounce_text("woman", clean_answer)
 
 
