@@ -7,3 +7,7 @@ https://github.com/davabase/whisper_real_time/blob/master/transcribe_demo.py
 another whisper repo
 https://github.com/Vaibhavs10/insanely-fast-whisper
 https://replicate.com/vaibhavs10/incredibly-fast-whisper?input=cog
+
+speech_generation (say command macos)
+https://ss64.com/mac/say.html
+https://stackoverflow.com/questions/38387676/while-mac-osx-has-the-say-command-to-speak-or-so-to-say-is-there-any-command-t
