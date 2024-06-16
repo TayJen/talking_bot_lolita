@@ -1,1 +1,8 @@
+main homework repository
 https://github.com/ad3002/make_jarvis?tab=readme-ov-file
+
+as ref
+https://github.com/vndee/local-talking-llm
+
+mine
+https://github.com/TayJen/talking_bot_lolita

@@ -1,2 +1,11 @@
 https://lilianweng.github.io/posts/2023-06-23-agent/
 
+as ref
+https://github.com/vndee/local-talking-llm/tree/main
+
+langchain
+https://python.langchain.com/v0.1/docs/modules/agents/how_to/agent_structured/
+https://python.langchain.com/v0.1/docs/modules/model_io/llms/custom_llm/
+https://python.langchain.com/v0.1/docs/modules/memory/conversational_customization/
+https://gist.github.com/Jason-CKY/6271cf5fd2c4b110ca27023d5a045fcd
+https://github.com/langchain-ai/langchain/issues/3799
