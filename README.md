@@ -3,6 +3,14 @@
 ## Installation
 
 macOS:
+
+### Download the weights
+https://huggingface.co/TheBloke/CodeLlama-7B-GGUF/blob/main/codellama-7b.Q4_0.gguf
+
+and put them into `weights` folder
+
+### Install libraries
+
 ```
 python -m venv venv
 source venv/bin/activate
@@ -10,7 +18,7 @@ CMAKE_ARGS="-DLLAMA_METAL=on" pip install -U llama-cpp-python --no-cache-dir
 pip install -r requirements.txt
 ```
 
-First start up will be the longest, as all the models must be downloaded. After that the startup takes approx 5-10 seconds.
+First start up will be the longest, as the whisper model must be downloaded. After that the startup takes approx 5-10 seconds.
 
 To start the bot run:
 
