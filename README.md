@@ -1,8 +1,6 @@
 # Own Jarvis
 
-## Installation
-
-macOS:
+## Installation (macOS only!)
 
 ### Download the weights
 https://huggingface.co/TheBloke/CodeLlama-7B-GGUF/blob/main/codellama-7b.Q4_0.gguf
