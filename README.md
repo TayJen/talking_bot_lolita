@@ -10,6 +10,9 @@ and put them into `weights` folder
 ### Install libraries
 
 ```
+# on MacOS using Homebrew (https://brew.sh/)
+brew install ffmpeg
+
 python -m venv venv
 source venv/bin/activate
 CMAKE_ARGS="-DLLAMA_METAL=on" pip install -U llama-cpp-python --no-cache-dir
