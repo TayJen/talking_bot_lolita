@@ -13,12 +13,7 @@ from langchain_core.language_models.llms import LLM
 
 from answer_bot.llama import LLAMA_LLM
 
-PROMPT_TEMPLATE = """
-You are a friendly helpful AI assistant. You are polite, respectful, and aim to provide precise responses.
-
-The conversation transcript is as follows:
-{history}
-
+PROMPT_TEMPLATE = """The conversation transcript is as follows: {history}
 Q: {input}. A:
 """
 
